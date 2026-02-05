@@ -1,0 +1,9 @@
+{
+	"name": "intech-fda-ADF",
+	"location": "brazilsouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5d83bb75-fb37-4c5f-9fc2-6530277ff1ed",
+		"tenantId": "e49f64b4-3094-49a4-a723-20976f5f5751"
+	}
+}
