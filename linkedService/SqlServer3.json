@@ -8,7 +8,7 @@
 			"database": "intech-sqllocal-db",
 			"encrypt": "True",
 			"trustServerCertificate": true,
-			"authenticationType": "Windows",
+			"authenticationType": "SQL",
 			"userName": "felipe",
 			"password": {
 				"type": "AzureKeyVaultSecret",
