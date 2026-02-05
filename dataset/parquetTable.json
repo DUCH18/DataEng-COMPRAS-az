@@ -1,41 +1,45 @@
 {
-	"name": "SqlServerTable2",
+	"name": "parquetTable",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "SqlServer4",
+			"referenceName": "AzureDataLakeStoragelink1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "SqlServerTable",
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
 		"schema": [
 			{
 				"name": "ProductId",
-				"type": "int",
-				"precision": 10
+				"type": "INT32"
 			},
 			{
 				"name": "SKU",
-				"type": "varchar"
+				"type": "UTF8"
 			},
 			{
 				"name": "Type",
-				"type": "varchar"
+				"type": "UTF8"
 			},
 			{
 				"name": "Name",
-				"type": "varchar"
+				"type": "UTF8"
 			},
 			{
 				"name": "Price",
-				"type": "decimal",
+				"type": "DECIMAL",
 				"precision": 10,
 				"scale": 2
 			},
 			{
 				"name": "CreatedAt",
-				"type": "datetime",
-				"precision": 23,
-				"scale": 3
+				"type": "INT96"
 			}
 		]
 	}
