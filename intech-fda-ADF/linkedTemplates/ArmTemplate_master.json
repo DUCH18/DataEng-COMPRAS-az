@@ -15,6 +15,22 @@
 			"type": "string",
 			"defaultValue": "https://devduchen23.dfs.core.windows.net/"
 		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://intech-keyvault-fda.vault.azure.net/"
+		},
+		"SqlServer4_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"SqlServer4_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "intech-sqllocal-db"
+		},
+		"SqlServer4_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "felipe"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -47,6 +63,18 @@
 					},
 					"AzureDataLakeStoragelink1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStoragelink1_properties_typeProperties_url')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"SqlServer4_properties_typeProperties_server": {
+						"value": "[parameters('SqlServer4_properties_typeProperties_server')]"
+					},
+					"SqlServer4_properties_typeProperties_database": {
+						"value": "[parameters('SqlServer4_properties_typeProperties_database')]"
+					},
+					"SqlServer4_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer4_properties_typeProperties_userName')]"
 					}
 				}
 			},
