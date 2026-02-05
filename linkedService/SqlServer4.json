@@ -7,7 +7,7 @@
 			"server": "localhost\\SQLEXPRESS",
 			"database": "intech-sqllocal-db",
 			"encrypt": "optional",
-			"trustServerCertificate": true,
+			"trustServerCertificate": false,
 			"authenticationType": "SQL",
 			"userName": "felipe",
 			"password": {
@@ -16,8 +16,7 @@
 					"referenceName": "AzureKeyVault1",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "pswd",
-				"secretVersion": "1d0e6458abb44fb5b9747f31f9dec3a3"
+				"secretName": "psswd"
 			}
 		},
 		"connectVia": {
