@@ -5,8 +5,14 @@
 		"factoryName": {
 			"value": "intech-fda-ADF"
 		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
 		"AzureDataLakeStoragelink1_accountKey": {
 			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://devduchen23.dfs.core.windows.net/"
 		},
 		"AzureDataLakeStoragelink1_properties_typeProperties_url": {
 			"value": "https://devduchen23.dfs.core.windows.net/"
