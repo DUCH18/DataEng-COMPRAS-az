@@ -7,7 +7,7 @@
 			"server": "localhost\\SQLEXPRESS",
 			"database": "intech-sqllocal-db",
 			"encrypt": "mandatory",
-			"trustServerCertificate": false,
+			"trustServerCertificate": true,
 			"authenticationType": "SQL",
 			"userName": "felipe",
 			"password": {
@@ -17,6 +17,9 @@
 					"type": "LinkedServiceReference"
 				},
 				"secretName": "psswd"
+			},
+			"alwaysEncryptedSettings": {
+				"alwaysEncryptedAkvAuthType": "ManagedIdentity"
 			}
 		},
 		"connectVia": {
