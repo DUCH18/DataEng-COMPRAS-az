@@ -112,6 +112,33 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "ToSilver",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/felipeduchen2@gmail.com/DataTransf Notebook 1"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricksLinkToWorkspace",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
