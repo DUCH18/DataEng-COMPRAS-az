@@ -1,7 +1,6 @@
 
 
 #Azure Data Engineering Pipeline (ADF + Databricks)
-📌 Visão Geral
 
 Este projeto demonstra um pipeline de engenharia de dados na Azure, utilizando Azure Data Factory para ingestão de dados e Azure Databricks para transformação, seguindo o padrão Medallion Architecture (Bronze → Silver).
 
