@@ -23,6 +23,10 @@
 			"type": "string",
 			"defaultValue": "https://devduchen23.dfs.core.windows.net/"
 		},
+		"AzureDatabricksLinkToWorkspace_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0209-225934-smmn23dk"
+		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://intech-keyvault-fda.vault.azure.net/"
@@ -80,6 +84,9 @@
 					},
 					"AzureKeyVault1_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"AzureDatabricksLinkToWorkspace_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricksLinkToWorkspace_properties_typeProperties_existingClusterId')]"
 					},
 					"SqlServer4_properties_typeProperties_server": {
 						"value": "[parameters('SqlServer4_properties_typeProperties_server')]"

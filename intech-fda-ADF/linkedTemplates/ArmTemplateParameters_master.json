@@ -17,6 +17,9 @@
 		"AzureDataLakeStoragelink1_properties_typeProperties_url": {
 			"value": "https://devduchen23.dfs.core.windows.net/"
 		},
+		"AzureDatabricksLinkToWorkspace_properties_typeProperties_existingClusterId": {
+			"value": "0209-225934-smmn23dk"
+		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://intech-keyvault-fda.vault.azure.net/"
 		},

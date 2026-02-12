@@ -27,6 +27,10 @@
 			"type": "string",
 			"defaultValue": "https://intech-keyvault-fda.vault.azure.net/"
 		},
+		"AzureDatabricksLinkToWorkspace_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0209-225934-smmn23dk"
+		},
 		"SqlServer4_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "localhost\\SQLEXPRESS"
@@ -247,6 +251,30 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStoragelink1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureDatabricksLinkToWorkspace')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDatabricks",
+				"typeProperties": {
+					"domain": "https://adb-7405618726202969.9.azuredatabricks.net",
+					"accessToken": {
+						"type": "AzureKeyVaultSecret",
+						"store": {
+							"referenceName": "AzureKeyVault1",
+							"type": "LinkedServiceReference"
+						},
+						"secretName": "forDataBricks"
+					},
+					"existingClusterId": "[parameters('AzureDatabricksLinkToWorkspace_properties_typeProperties_existingClusterId')]"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureKeyVault1')]"
 			]
 		},
 		{
@@ -520,6 +548,33 @@
 								}
 							]
 						}
+					},
+					{
+						"name": "ToSilver",
+						"type": "DatabricksNotebook",
+						"dependsOn": [
+							{
+								"activity": "ForEach1",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"notebookPath": "/Users/felipeduchen2@gmail.com/DataTransf Notebook 1"
+						},
+						"linkedServiceName": {
+							"referenceName": "AzureDatabricksLinkToWorkspace",
+							"type": "LinkedServiceReference"
+						}
 					}
 				],
 				"policy": {
@@ -529,6 +584,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/SqlServerTable2')]",
+				"[concat(variables('factoryId'), '/linkedServices/AzureDatabricksLinkToWorkspace')]",
 				"[concat(variables('factoryId'), '/datasets/parquetTable')]"
 			]
 		}
