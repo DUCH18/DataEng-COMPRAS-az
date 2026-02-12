@@ -59,8 +59,8 @@ SQL Server (fonte de dados)
 ├── adf/
 │   └── pipelines/
 ├── databricks/
-│   ├── bronze_ingestion.ipynb
-│   └── silver_transformation.ipynb
+│   ├── 
+│   └── bronze_to_silver_transformation.ipynb
 ├── docs/
-│   └── architecture.png
+│   
 └── README.md
