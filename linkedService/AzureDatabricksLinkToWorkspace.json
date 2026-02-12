@@ -1,0 +1,19 @@
+{
+	"name": "AzureDatabricksLinkToWorkspace",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-7405618726202969.9.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "forDataBricks"
+			},
+			"existingClusterId": "0209-225934-smmn23dk"
+		}
+	}
+}
