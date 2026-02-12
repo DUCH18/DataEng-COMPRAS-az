@@ -5,6 +5,7 @@
 Este projeto demonstra um pipeline de engenharia de dados na Azure, utilizando Azure Data Factory para ingestão de dados e Azure Databricks para transformação, seguindo o padrão Medallion Architecture (Bronze → Silver).
 
 Os dados são extraídos de um banco relacional, armazenados inicialmente como Parquet (Bronze) e depois transformados e persistidos como Delta Tables (Silver) no Azure Data Lake Storage Gen2.
+<img width="1536" height="1024" alt="ch Image Feb 12, 2026, 04_38_16 PM" src="https://github.com/user-attachments/assets/31e1fef2-0ad8-452a-92d5-fca253f8f96d" />
 
 🏗️ Arquitetura
 
