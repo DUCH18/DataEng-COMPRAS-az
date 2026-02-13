@@ -2,7 +2,7 @@
 	"name": "parquetTable",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStoragelink1",
+			"referenceName": "AzureDataLakeStorage2",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
